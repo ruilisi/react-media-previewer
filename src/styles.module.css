@@ -14,7 +14,7 @@
   justify-content: space-between;
   position: fixed;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 0;
 }
 
 .previewName {
@@ -22,7 +22,8 @@
   font-weight: bold;
   width: 100%;
   display: flex;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  font-size: 18px;
 }
 
 .previewIcons {
@@ -30,7 +31,7 @@
 }
 
 .previewIcon {
-  margin-left: 1rem;
+  margin: auto 0.5rem;
   color: white;
 }
 
@@ -39,24 +40,12 @@
   cursor: pointer;
 }
 
-.modalContainer :global .ant-modal-body {
-  padding: 0;
-  width: 100%;
-}
-
-.modalContainer :global .ant-modal-content {
-  padding: 0;
-}
-
-.modalContainer :global .ant-image {
-  display: block;
-}
-
 .modalWrap {
   background: rgb(29 29 29 / 95%);
   z-index: 4396;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .mediaContainer {
