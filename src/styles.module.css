@@ -1,0 +1,67 @@
+.modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  max-width: 80vw;
+  width: auto !important;
+}
+
+.previewContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.previewName {
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  margin-left: 1.5rem;
+}
+
+.previewIcons {
+  display: flex;
+}
+
+.previewIcon {
+  margin-left: 1rem;
+  color: white;
+}
+
+.previewIcon:hover {
+  color: #dc2626;
+  cursor: pointer;
+}
+
+.modalContainer :global .ant-modal-body {
+  padding: 0;
+  width: 100%;
+}
+
+.modalContainer :global .ant-modal-content {
+  padding: 0;
+}
+
+.modalContainer :global .ant-image {
+  display: block;
+}
+
+.modalWrap {
+  background: rgb(29 29 29 / 95%);
+  z-index: 4396;
+  display: flex;
+  align-items: center;
+}
+
+.mediaContainer {
+  max-height: 80vh;
+  height: 100%;
+  width: 100%;
+  display: block;
+}

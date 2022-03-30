@@ -1,0 +1,53 @@
+{
+  "name": "react-media-previewer",
+  "version": "1.2.0",
+  "description": "A media previewer component for React",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types",
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "lint:style": "stylelint '**/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruilisi/react-media-previewer.git"
+  },
+  "author": "Ruilisi",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "image",
+    "video",
+    "media-previewer"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@svgr/rollup": "^6.2.1",
+    "@types/css-modules": "^1.0.2",
+    "@types/react": "^17.0.2",
+    "@types/react-copy-to-clipboard": "5.0.0",
+    "@types/react-dom": "^17.0.2",
+    "postcss": "^8.3.0",
+    "rollup": "^2.51.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard": "^25.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "dependencies": {
+    "rc-dialog": "^8.7.0",
+    "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
+  }
+}
