@@ -1,0 +1,68 @@
+---
+kind: pipeline
+type: kubernetes
+name: compliance
+
+platform:
+  os: linux
+  arch: arm64
+
+trigger:
+  ref:
+    - refs/tags/**
+    - refs/pull/**
+    - refs/heads/**
+  event:
+    exclude:
+      - promote
+
+steps:
+  - name: install-pkgs
+    image: ccr.ccs.tencentyun.com/ruilisi-pub/nextjs-base
+    commands:
+      - yarn install --pure-lockfile --cache-folder /tmp/cache/yarn-cache
+    environment:
+      NODE_ENV: development
+  - name: eslint
+    image: ccr.ccs.tencentyun.com/ruilisi-pub/nextjs-base
+    commands:
+      - yarn eslint
+  - name: tsc
+    image: ccr.ccs.tencentyun.com/ruilisi-pub/nextjs-base
+    commands:
+      - yarn tsc --noEmit
+  - name: stylelint
+    image: ccr.ccs.tencentyun.com/ruilisi-pub/nextjs-base
+    commands:
+      - yarn lint:style
+
+---
+kind: pipeline
+type: kubernetes
+name: sync-to-github
+
+platform:
+  os: linux
+  arch: arm64
+
+workspace:
+  path: /drone/src
+
+trigger:
+  ref:
+    - refs/heads/main
+  event:
+    exclude:
+      - promote
+
+steps:
+  - name: sync commit
+    image: alpine/git
+    environment:
+      SSH_KEY:
+        from_secret: github_ssh_key
+    commands:
+      - mkdir -p /root/.ssh/ && echo $SSH_KEY | base64 -d > /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa
+      - ssh-keyscan -t rsa github.com > /root/.ssh/known_hosts && chmod 600 /root/.ssh/known_hosts
+      - git remote add github git@github.com:ruilisi/react-media-previewer.git
+      - git push github ${branch:-${DRONE_BRANCH}} --force

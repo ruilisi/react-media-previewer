@@ -6,14 +6,14 @@
 </p>
 
 <p align="center">
-  <a href="README-CN.md">简体中文</a> | English
+  <a href="README.md">English</a> | 简体中文
 </p>
 
-## Purpose
+## 目标
 
-`react-media-previewer` is to create a previewer that is compatible with viewing various media files by one click. It is a component built with React and Typescript. In order to preview media files such as images, video and audio, we made it.
+`react-media-previewer` 目的是打造一个能够兼容各种媒体文件的预览器。该项目使用 React 和 Typescript 开发，为了能够一键查看像图片、音频、视频等文件，我们创造了它。
 
-## Installation
+## 安装
 
 ```
 npm install react-media-previewer
@@ -25,7 +25,7 @@ or
 yarn add react-media-previewer
 ```
 
-## Usage
+## 使用
 
 ```js
 import { render } from "react-dom";
@@ -53,20 +53,20 @@ render(<App />, document.getElementById("app"));
 
 ![image.png](https://assets.ruilisi.com/Eb415xIUbRnT4qkkOG=gsQ==)
 
-## Demo
+## 样例
 
-[Try Demo on CodeSandbox](https://codesandbox.io/s/react-media-previewer-9teg9p)
+[试试 CodeSandbox 上的样例](https://codesandbox.io/s/react-media-previewer-9teg9p)
 
-## Props
+## API
 
-| Property   | Type     | Description                                                     |
-| :--------- | :------- | :-------------------------------------------------------------- |
-| visible    | bollean  | whether the previewer is visible or not                         |
-| setVisible | function | function called to close the previewer when previewer is opened |
-| url        | string   | media file url                                                  |
-| type       | string   | media file type                                                 |
-| name       | string   | media file name                                                 |
+| 属性       | 类型     | 描述               |
+| :--------- | :------- | :----------------- |
+| visible    | bollean  | 预览器是否可见     |
+| setVisible | function | 控制预览器可见性   |
+| url        | string   | 媒体文件的链接地址 |
+| type       | string   | 媒体文件的类型     |
+| name       | string   | 媒体文件的名称     |
 
-## License
+## 许可
 
 MIT © [ruilisi](https://github.com/ruilisi)
