@@ -1,7 +1,7 @@
 <h1 align="center">React Media Previewer</h1>
 <p align="center">
   <a href="https://drone.ruilisi.com/ruilisi/react-media-previewer" title="Build Status">
-    <img src="https://drone.ruilisi.com/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/main">
+    <img src="https://drone.ruilisi.com/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/master">
   </a>
 </p>
 
@@ -51,7 +51,7 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
-![image.png](https://assets.ruilisi.com/Eb415xIUbRnT4qkkOG=gsQ==)
+![image.png](https://assets.ruilisi.com/yyTyIwbMHNcbb7txVjdjog==)
 
 ## 样例
 

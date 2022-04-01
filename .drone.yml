@@ -50,7 +50,7 @@ workspace:
 
 trigger:
   ref:
-    - refs/heads/main
+    - refs/heads/master
   event:
     exclude:
       - promote
