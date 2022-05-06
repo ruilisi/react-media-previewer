@@ -54,3 +54,11 @@
   width: 100%;
   display: block;
 }
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}

@@ -1,5 +1,6 @@
 import Modal from "rc-dialog";
 import React, { useState } from "react";
+import File from "./File";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 import styles from "./styles.module.css";
@@ -42,7 +43,7 @@ const PreviewModal: React.FC<PropType> = ({
         <div className={styles.previewName}>{name}</div>
         <div className={styles.previewIcons}>
           <a href={`${url}?download/${name}`}>
-            <AiOutlineDownload size="2rem" className={styles.previewIcon} />
+            <AiOutlineDownload size="1.5rem" className={styles.previewIcon} />
           </a>
           <CopyToClipboard
             text={url}
@@ -55,26 +56,23 @@ const PreviewModal: React.FC<PropType> = ({
           >
             <span>
               {copyed ? (
-                <AiOutlineCheck size="2rem" className={styles.previewIcon} />
+                <AiOutlineCheck size="1.5rem" className={styles.previewIcon} />
               ) : (
-                <AiOutlineShareAlt size="2rem" className={styles.previewIcon} />
+                <AiOutlineShareAlt
+                  size="1.5rem"
+                  className={styles.previewIcon}
+                />
               )}
             </span>
           </CopyToClipboard>
           <AiOutlineClose
-            size="2rem"
+            size="1.5rem"
             className={styles.previewIcon}
             onClick={() => setVisible(false)}
           />
         </div>
       </div>
-      {type === "image" ? (
-        <img alt="" src={url} className={styles.meidaContainer} />
-      ) : (
-        <video src={url} controls className={styles.mediaContainer}>
-          <track kind="captions" />
-        </video>
-      )}
+      <File url={url} type={type} />
     </Modal>
   );
 };
