@@ -15,7 +15,6 @@ type PropType = {
   visible: boolean;
   setVisible: (visible: boolean) => void;
   url: string;
-  type: string;
   name: string;
 };
 
@@ -23,7 +22,6 @@ const PreviewModal: React.FC<PropType> = ({
   visible,
   setVisible,
   url,
-  type,
   name,
 }) => {
   const [copyed, setCopyed] = useState<boolean>(false);
@@ -72,7 +70,7 @@ const PreviewModal: React.FC<PropType> = ({
           />
         </div>
       </div>
-      <File url={url} type={type} />
+      <File url={url} />
     </Modal>
   );
 };

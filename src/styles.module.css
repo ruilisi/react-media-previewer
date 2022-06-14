@@ -13,17 +13,16 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 0.5rem;
+  top: 1.5rem;
   right: 0;
 }
 
 .previewName {
   color: white;
-  font-weight: bold;
   width: 100%;
   display: flex;
-  margin-left: 1rem;
-  font-size: 18px;
+  margin-left: 2rem;
+  font-size: 16px;
 }
 
 .previewIcons {
@@ -31,7 +30,7 @@
 }
 
 .previewIcon {
-  margin: auto 0.5rem;
+  margin: auto 1rem;
   color: white;
 }
 
@@ -53,6 +52,16 @@
   height: 100%;
   width: 100%;
   display: block;
+  overflow: auto;
+}
+
+.mediaContainer canvas {
+  max-width: 100%;
+  height: unset !important;
+}
+
+.mediaContainer div {
+  left: unset !important;
 }
 
 .flexCenter {
