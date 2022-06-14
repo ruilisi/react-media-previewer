@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="logo.png" align="center" width="150px" height="150px" />
+</p>
 <h1 align="center">React Media Previewer</h1>
 <p align="center">
   <a href="https://drone.ruilisi.com/ruilisi/react-media-previewer" title="Build Status">
@@ -42,7 +45,6 @@ function App() {
         name="image.png"
         setVisible={setVisible}
         url="https://assets.ruilisi.com/attachment-8de9464b-d286-43a9-b18e-f8a984bf8623.jpg"
-        type="image"
       />
     </div>
   );
@@ -51,7 +53,7 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
-![image.png](https://assets.ruilisi.com/yyTyIwbMHNcbb7txVjdjog==)
+<img src="example.png" />
 
 ## Demo
 
@@ -64,7 +66,6 @@ render(<App />, document.getElementById("app"));
 | visible    | bollean  | whether the previewer is visible or not                         |
 | setVisible | function | function called to close the previewer when previewer is opened |
 | url        | string   | media file url                                                  |
-| type       | string   | media file type                                                 |
 | name       | string   | media file name                                                 |
 
 ## License
