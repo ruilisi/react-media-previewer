@@ -14,7 +14,7 @@
 
 ## Purpose
 
-`react-media-previewer` is to create a previewer that is compatible with viewing various media files by one click. It is a component built with React and Typescript. In order to preview media files such as images, video and audio, we made it.
+`react-media-previewer` is to create a previewer that is compatible with viewing various media files by one click. It is a component built with React and Typescript. In order to preview media files such as image, video, audio and PDF, we made it.
 
 ## Installation
 
@@ -42,9 +42,9 @@ function App() {
       <button onClick={() => setVisible(true)}>view media</button>
       <PreviewModal
         visible={visible}
-        name="image.png"
+        name="YOUR IMAGE NAME"
         setVisible={setVisible}
-        url="https://assets.ruilisi.com/attachment-8de9464b-d286-43a9-b18e-f8a984bf8623.jpg"
+        url="YOUR IMAGE URL"
       />
     </div>
   );
@@ -53,9 +53,15 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
+## Preview PDF
+
 <img src="example.png" />
 
-## Demo
+## Preview Image
+
+<img src="example.gif" />
+
+## Live Demo
 
 [Try Demo on CodeSandbox](https://codesandbox.io/s/react-media-previewer-9teg9p)
 
@@ -70,4 +76,4 @@ render(<App />, document.getElementById("app"));
 
 ## License
 
-MIT © [ruilisi](https://github.com/ruilisi)
+[MIT](https://github.com/ruilisi/react-media-previewer/blob/master/LICENSE.md)

@@ -14,7 +14,7 @@
 
 ## 目标
 
-`react-media-previewer` 目的是打造一个能够兼容各种媒体文件的预览器。该项目使用 React 和 Typescript 开发，为了能够一键查看像图片、音频、视频等文件，我们创造了它。
+`react-media-previewer` 目的是打造一个能够兼容各种媒体文件的预览器。该项目使用 React 和 Typescript 开发，为了能够一键查看像图片、音视频、PDF 等文件，我们创造了它。
 
 ## 安装
 
@@ -42,9 +42,9 @@ function App() {
       <button onClick={() => setVisible(true)}>view media</button>
       <PreviewModal
         visible={visible}
-        name="image.png"
+        name="图片名称"
         setVisible={setVisible}
-        url="https://assets.ruilisi.com/attachment-8de9464b-d286-43a9-b18e-f8a984bf8623.jpg"
+        url="图片链接"
       />
     </div>
   );
@@ -53,9 +53,15 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
+## 预览 PDF
+
 <img src="example.png" />
 
-## 样例
+## 预览图片
+
+<img src="example.gif" />
+
+## 在线样例
 
 [试试 CodeSandbox 上的样例](https://codesandbox.io/s/react-media-previewer-9teg9p)
 
@@ -70,4 +76,4 @@ render(<App />, document.getElementById("app"));
 
 ## 许可
 
-MIT © [ruilisi](https://github.com/ruilisi)
+[MIT](https://github.com/ruilisi/react-media-previewer/blob/master/LICENSE.md)
