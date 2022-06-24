@@ -3,6 +3,12 @@ const config = {
   rules: {
     "color-hex-case": "lower",
     "no-descending-specificity": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: ["extends", "tailwind"],
+      },
+    ],
     "selector-pseudo-class-no-unknown": [
       true,
       {
