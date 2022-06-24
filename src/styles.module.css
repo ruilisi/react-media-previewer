@@ -7,38 +7,6 @@
   width: auto !important;
 }
 
-.previewContainer {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 1.5rem;
-  right: 0;
-}
-
-.previewName {
-  color: white;
-  width: 100%;
-  display: flex;
-  margin-left: 2rem;
-  font-size: 16px;
-}
-
-.previewIcons {
-  display: flex;
-}
-
-.previewIcon {
-  margin: auto 1rem;
-  color: white;
-}
-
-.previewIcon:hover {
-  color: #dc2626;
-  cursor: pointer;
-}
-
 .modalWrap {
   background: rgb(29 29 29 / 95%);
   z-index: 4396;
@@ -62,12 +30,4 @@
 
 .mediaContainer div {
   left: unset !important;
-}
-
-.flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 18px;
 }

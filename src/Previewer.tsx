@@ -32,16 +32,22 @@ const PreviewModal: React.FC<PropType> = ({
       footer={null}
       zIndex={10000}
       closable={false}
+      maskClosable={false}
       className={styles.modalContainer}
       wrapClassName={styles.modalWrap}
       transitionName=""
       maskTransitionName=""
     >
-      <div className={styles.previewContainer}>
-        <div className={styles.previewName}>{name}</div>
-        <div className={styles.previewIcons}>
-          <a href={`${url}?download/${name}`}>
-            <AiOutlineDownload size="1.5rem" className={styles.previewIcon} />
+      <div className="flex w-full items-center justify-end fixed top-6 right-4">
+        <div className="flex">
+          <a
+            href={`${url}?download/${name}`}
+            className="my-auto mx-4 bg-black rounded-full p-2"
+          >
+            <AiOutlineDownload
+              size="1.5rem"
+              className="text-white hover:text-red-500 cursor-pointer"
+            />
           </a>
           <CopyToClipboard
             text={url}
@@ -52,22 +58,27 @@ const PreviewModal: React.FC<PropType> = ({
               }, 2000);
             }}
           >
-            <span>
+            <a className="my-auto mx-4 bg-black rounded-full p-2">
               {copyed ? (
-                <AiOutlineCheck size="1.5rem" className={styles.previewIcon} />
+                <AiOutlineCheck
+                  size="1.5rem"
+                  className="text-white hover:text-red-500 cursor-pointer"
+                />
               ) : (
                 <AiOutlineShareAlt
                   size="1.5rem"
-                  className={styles.previewIcon}
+                  className="text-white hover:text-red-500 cursor-pointer"
                 />
               )}
-            </span>
+            </a>
           </CopyToClipboard>
-          <AiOutlineClose
-            size="1.5rem"
-            className={styles.previewIcon}
-            onClick={() => setVisible(false)}
-          />
+          <a className="my-auto mx-4 bg-black rounded-full p-2">
+            <AiOutlineClose
+              size="1.5rem"
+              className="text-white hover:text-red-500 cursor-pointer"
+              onClick={() => setVisible(false)}
+            />
+          </a>
         </div>
       </div>
       <File url={url} />
