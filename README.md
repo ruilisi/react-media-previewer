@@ -74,6 +74,22 @@ render(<App />, document.getElementById("app"));
 | url        | string   | media file url                                                  |
 | name       | string   | media file name                                                 |
 
+## Roadmap
+
+- ✅ Image preview
+  - ✅ Image rotate
+  - Image scale
+  - Multiple images preview
+- ✅ Audio and video preview
+- ✅ PDF preview
+  - PDF pagination
+- ✅ Word preview
+- ✅ Excel preview
+- ✅ PPT preview
+- More features
+  - Keyboard support
+  - ...
+
 ## License
 
 [MIT](https://github.com/ruilisi/react-media-previewer/blob/master/LICENSE.md)

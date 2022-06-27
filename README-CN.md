@@ -74,6 +74,22 @@ render(<App />, document.getElementById("app"));
 | url        | string   | 媒体文件的链接地址 |
 | name       | string   | 媒体文件的名称     |
 
+## 项目计划
+
+- ✅ 图片预览
+  - ✅ 图片旋转
+  - 图片缩放
+  - 多图预览
+- ✅ 音视频预览
+- ✅ PDF 预览
+  - PDF 翻页
+- ✅ Word 预览
+- ✅ Excel 预览
+- ✅ PPT 预览
+- 更多功能
+  - 键盘支持
+  - ...
+
 ## 许可
 
 [MIT](https://github.com/ruilisi/react-media-previewer/blob/master/LICENSE.md)
