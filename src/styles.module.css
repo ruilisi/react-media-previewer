@@ -31,3 +31,26 @@
 .mediaContainer div {
   left: unset !important;
 }
+
+.docContainer {
+  height: 80vh;
+  width: 650px;
+  max-width: 90vw;
+  margin: auto;
+  overflow: auto;
+}
+
+.excelContainer {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  overflow: auto;
+}
+
+.pptContainer {
+  height: 80vh;
+  width: 60vw;
+  max-width: 80vw;
+  margin: auto;
+  overflow: auto;
+}

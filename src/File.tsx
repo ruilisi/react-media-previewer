@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import mime from "mime-types";
 import PDFViewer from "./PDFViewer";
-import { isAudioFile, isImageFile, isPDFFile, isVideoFile } from "./utils";
+import {
+  isAudioFile,
+  isImageFile,
+  isOfficeExcelFile,
+  isOfficePPTFile,
+  isOfficeWordFile,
+  isPDFFile,
+  isVideoFile,
+} from "./utils";
 import styles from "./styles.module.css";
 import { AiOutlineRotateLeft, AiOutlineRotateRight } from "react-icons/ai";
 
@@ -45,6 +53,27 @@ const PreviewModal: React.FC<PropType> = ({ url }) => {
         <div className={styles.mediaContainer}>
           <PDFViewer url={url} />
         </div>
+      );
+    if (isOfficeWordFile(url))
+      return (
+        <iframe
+          className={styles.docContainer}
+          src={`https://view.officeapps.live.com/op/embed.aspx?src=${url}`}
+        />
+      );
+    if (isOfficePPTFile(url))
+      return (
+        <iframe
+          className={styles.pptContainer}
+          src={`https://view.officeapps.live.com/op/embed.aspx?src=${url}`}
+        />
+      );
+    if (isOfficeExcelFile(url))
+      return (
+        <iframe
+          className={styles.excelContainer}
+          src={`https://view.officeapps.live.com/op/embed.aspx?src=${url}`}
+        />
       );
     if (isVideoFile(type) || isAudioFile(type))
       return (
