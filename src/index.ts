@@ -1,4 +1,4 @@
-import Previewer from "./Previewer";
-import "./global.css";
-import "./tailwind.css";
+import Previewer from "./components/Previewer";
+import "./styles/global.css";
+import "./styles/tailwind.css";
 export default Previewer;

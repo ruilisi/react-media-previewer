@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import File from "./File";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-import styles from "./styles.module.css";
+import styles from "../styles/styles.module.css";
 import {
   AiOutlineCheck,
   AiOutlineDownload,

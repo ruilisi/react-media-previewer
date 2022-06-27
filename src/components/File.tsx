@@ -9,8 +9,8 @@ import {
   isOfficeWordFile,
   isPDFFile,
   isVideoFile,
-} from "./utils";
-import styles from "./styles.module.css";
+} from "../utils";
+import styles from "../styles/styles.module.css";
 import { AiOutlineRotateLeft, AiOutlineRotateRight } from "react-icons/ai";
 
 type PropType = {
