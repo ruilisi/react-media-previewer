@@ -28,7 +28,7 @@ export default {
       extensions: /\.(png|jpg|jpeg|gif|svg)$/,
     }),
     postcss({
-      extract: "index.css",
+      extract: false,
     }),
   ],
 

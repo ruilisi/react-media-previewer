@@ -33,13 +33,12 @@ yarn add react-media-previewer
 ```js
 import { render } from "react-dom";
 import PreviewModal from "react-media-previewer";
-import "react-media-previewer/dist/index.css";
 
 function App() {
   const [visible, setVisible] = useState(false);
   return (
     <div className="App">
-      <button onClick={() => setVisible(true)}>view media</button>
+      <button onClick={() => setVisible(true)}>打开</button>
       <PreviewModal
         visible={visible}
         name="图片名称"
