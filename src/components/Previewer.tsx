@@ -9,28 +9,27 @@ import {
   AiOutlineDownload,
   AiOutlineShareAlt,
   AiOutlineClose,
+  AiOutlineRight,
+  AiOutlineLeft,
 } from "react-icons/ai";
 
 type PropType = {
   visible: boolean;
   setVisible: (visible: boolean) => void;
-  url: string;
-  name: string;
+  urls: string[];
 };
 
-const PreviewModal: React.FC<PropType> = ({
-  visible,
-  setVisible,
-  url,
-  name,
-}) => {
+const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
   const [copyed, setCopyed] = useState<boolean>(false);
+  const [currentUrl, setCurrentUrl] = useState(urls[0]);
+  const [index, setIndex] = useState(0);
   return (
     <Modal
       visible={visible}
       onClose={() => setVisible(false)}
       footer={null}
       zIndex={10000}
+      destroyOnClose
       closable={false}
       maskClosable={false}
       className={styles.modalContainer}
@@ -41,7 +40,7 @@ const PreviewModal: React.FC<PropType> = ({
       <div className="flex w-full items-center justify-end fixed top-6 right-4">
         <div className="flex">
           <a
-            href={`${url}?download/${name}`}
+            href={`${currentUrl}?download/${currentUrl.split("/").pop()}`}
             className="my-auto mx-4 bg-black rounded-full p-2"
           >
             <AiOutlineDownload
@@ -50,7 +49,7 @@ const PreviewModal: React.FC<PropType> = ({
             />
           </a>
           <CopyToClipboard
-            text={url}
+            text={currentUrl}
             onCopy={() => {
               setCopyed(true);
               setTimeout(() => {
@@ -81,7 +80,35 @@ const PreviewModal: React.FC<PropType> = ({
           </a>
         </div>
       </div>
-      <File url={url} />
+      <File url={currentUrl} />
+      <a
+        className={`my-auto mx-4 bg-black rounded-full p-3 fixed md:top-1/2 md:bottom-auto left-2 sm:bottom-8 sm:top-auto ${
+          index === 0 ? "hidden" : "block"
+        }`}
+        onClick={() => {
+          setIndex(index - 1);
+          setCurrentUrl(urls[index - 1]);
+        }}
+      >
+        <AiOutlineLeft
+          size="2rem"
+          className="text-white hover:text-red-500 cursor-pointer"
+        />
+      </a>
+      <a
+        className={`my-auto mx-4 bg-black rounded-full p-3 fixed md:top-1/2 md:bottom-auto right-2 sm:bottom-8 sm:top-auto ${
+          index + 1 === urls.length ? "hidden" : "block"
+        }`}
+        onClick={() => {
+          setIndex(index + 1);
+          setCurrentUrl(urls[index + 1]);
+        }}
+      >
+        <AiOutlineRight
+          size="2rem"
+          className="text-white hover:text-red-500 cursor-pointer"
+        />
+      </a>
     </Modal>
   );
 };
