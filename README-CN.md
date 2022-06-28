@@ -52,11 +52,7 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
-## 预览 PDF
-
-<img src="example.png" />
-
-## 预览图片
+## 预览文件
 
 <img src="example.gif" />
 
@@ -78,7 +74,7 @@ render(<App />, document.getElementById("app"));
 - ✅ 图片预览
   - ✅ 图片旋转
   - 图片缩放
-  - 多图预览
+  - ✅ 多图预览
 - ✅ 音视频预览
 - ✅ PDF 预览
   - PDF 翻页

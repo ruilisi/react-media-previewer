@@ -52,11 +52,7 @@ function App() {
 render(<App />, document.getElementById("app"));
 ```
 
-## Preview PDF
-
-<img src="example.png" />
-
-## Preview Image
+## Preview Files
 
 <img src="example.gif" />
 
@@ -78,7 +74,7 @@ render(<App />, document.getElementById("app"));
 - ✅ Image preview
   - ✅ Image rotate
   - Image scale
-  - Multiple images preview
+  - ✅ Multiple images preview
 - ✅ Audio and video preview
 - ✅ PDF preview
   - PDF pagination
