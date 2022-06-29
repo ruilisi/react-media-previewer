@@ -21,8 +21,9 @@ type PropType = {
 
 const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
   const [copyed, setCopyed] = useState<boolean>(false);
-  const [currentUrl, setCurrentUrl] = useState(urls[0]);
   const [index, setIndex] = useState(0);
+  const currentUrl = urls[index];
+
   return (
     <Modal
       visible={visible}
@@ -87,7 +88,6 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
         }`}
         onClick={() => {
           setIndex(index - 1);
-          setCurrentUrl(urls[index - 1]);
         }}
       >
         <AiOutlineLeft
@@ -101,7 +101,6 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
         }`}
         onClick={() => {
           setIndex(index + 1);
-          setCurrentUrl(urls[index + 1]);
         }}
       >
         <AiOutlineRight

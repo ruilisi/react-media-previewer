@@ -1,6 +1,6 @@
 {
   "name": "react-media-previewer",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "A media previewer component for React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
