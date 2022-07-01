@@ -1,6 +1,5 @@
 module.exports = {
   content: ["./src/components/*.tsx"],
-  important: true,
   theme: {
     extend: {
       zIndex: {
@@ -16,4 +15,7 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 };

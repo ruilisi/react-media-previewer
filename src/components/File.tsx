@@ -34,14 +34,14 @@ const PreviewModal: React.FC<PropType> = ({ url }) => {
             <a className="my-auto mx-4 bg-black rounded-full p-2">
               <AiOutlineRotateLeft
                 size="1rem"
-                className="text-white hover:text-red-500 cursor-pointer"
+                className="text-white hover:!text-red-500 cursor-pointer"
                 onClick={() => setRotate(rotate - 90)}
               />
             </a>
             <a className="my-auto mx-4 bg-black rounded-full p-2">
               <AiOutlineRotateRight
                 size="1rem"
-                className="text-white hover:text-red-500 cursor-pointer"
+                className="text-white hover:!text-red-500 cursor-pointer"
                 onClick={() => setRotate(rotate + 90)}
               />
             </a>

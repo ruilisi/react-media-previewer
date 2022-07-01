@@ -46,7 +46,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
           >
             <AiOutlineDownload
               size="1.5rem"
-              className="text-white hover:text-red-500 cursor-pointer"
+              className="text-white hover:!text-red-500 cursor-pointer"
             />
           </a>
           <CopyToClipboard
@@ -62,12 +62,12 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
               {copyed ? (
                 <AiOutlineCheck
                   size="1.5rem"
-                  className="text-white hover:text-red-500 cursor-pointer"
+                  className="text-white hover:!text-red-500 cursor-pointer"
                 />
               ) : (
                 <AiOutlineShareAlt
                   size="1.5rem"
-                  className="text-white hover:text-red-500 cursor-pointer"
+                  className="text-white hover:!text-red-500 cursor-pointer"
                 />
               )}
             </a>
@@ -75,7 +75,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
           <a className="my-auto mx-4 bg-black rounded-full p-2">
             <AiOutlineClose
               size="1.5rem"
-              className="text-white hover:text-red-500 cursor-pointer"
+              className="text-white hover:!text-red-500 cursor-pointer"
               onClick={() => setVisible(false)}
             />
           </a>
@@ -92,7 +92,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
       >
         <AiOutlineLeft
           size="2rem"
-          className="text-white hover:text-red-500 cursor-pointer"
+          className="text-white hover:!text-red-500 cursor-pointer"
         />
       </a>
       <a
@@ -105,7 +105,7 @@ const PreviewModal: React.FC<PropType> = ({ visible, setVisible, urls }) => {
       >
         <AiOutlineRight
           size="2rem"
-          className="text-white hover:text-red-500 cursor-pointer"
+          className="text-white hover:!text-red-500 cursor-pointer"
         />
       </a>
     </Modal>
