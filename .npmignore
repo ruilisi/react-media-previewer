@@ -1,1 +1,9 @@
 /src
+/images
+postcss.config.js
+README-CN.md
+commitlint.config.js
+tailwind.config.js
+tslint.json
+tsconfig.json
+rollup.config.js

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" align="center" width="150px" height="150px" />
+  <img src="images/logo.png" align="center" width="150px" height="150px" />
 </p>
 <h1 align="center">React Media Previewer</h1>
 <p align="center">
@@ -54,7 +54,7 @@ render(<App />, document.getElementById("app"));
 
 ## Preview Files
 
-<img src="example.gif" />
+<img src="images/example.gif" />
 
 ## Live Demo
 
