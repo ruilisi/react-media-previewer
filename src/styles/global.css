@@ -2,6 +2,11 @@ img {
   max-width: 100%;
 }
 
+svg,
+video {
+  display: block !important;
+}
+
 .rc-dialog {
   position: relative;
   width: auto;
