@@ -3,8 +3,8 @@
 </p>
 <h1 align="center">React Media Previewer</h1>
 <p align="center">
-  <a href="https://drone.ruilisi.com/ruilisi/react-media-previewer" title="Build Status">
-    <img src="https://drone.ruilisi.com/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/master">
+  <a href="https://drone.yuancode.co/ruilisi/react-media-previewer" title="Build Status">
+    <img src="https://drone.yuancode.co/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/master">
   </a>
 </p>
 
@@ -41,9 +41,8 @@ function App() {
       <button onClick={() => setVisible(true)}>open</button>
       <PreviewModal
         visible={visible}
-        name="YOUR IMAGE NAME"
         setVisible={setVisible}
-        url="YOUR IMAGE URL"
+        urls={['YOUR IMAGE URL', 'YOUR IMAGE URL']}
       />
     </div>
   );
@@ -67,7 +66,6 @@ render(<App />, document.getElementById("app"));
 | visible    | bollean  | whether the previewer is visible or not                         |
 | setVisible | function | function called to close the previewer when previewer is opened |
 | url        | string   | media file url                                                  |
-| name       | string   | media file name                                                 |
 
 ## Roadmap
 

@@ -3,8 +3,8 @@
 </p>
 <h1 align="center">React Media Previewer</h1>
 <p align="center">
-  <a href="https://drone.ruilisi.com/ruilisi/react-media-previewer" title="Build Status">
-    <img src="https://drone.ruilisi.com/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/master">
+  <a href="https://drone.yuancode.co/ruilisi/react-media-previewer" title="Build Status">
+    <img src="https://drone.yuancode.co/api/badges/ruilisi/react-media-previewer/status.svg?ref=refs/heads/master">
   </a>
 </p>
 
@@ -41,9 +41,8 @@ function App() {
       <button onClick={() => setVisible(true)}>打开</button>
       <PreviewModal
         visible={visible}
-        name="图片名称"
         setVisible={setVisible}
-        url="图片链接"
+        urls={['图片链接', '图片链接']}
       />
     </div>
   );
@@ -67,7 +66,6 @@ render(<App />, document.getElementById("app"));
 | visible    | bollean  | 预览器是否可见     |
 | setVisible | function | 控制预览器可见性   |
 | url        | string   | 媒体文件的链接地址 |
-| name       | string   | 媒体文件的名称     |
 
 ## 项目计划
 

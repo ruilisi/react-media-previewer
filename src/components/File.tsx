@@ -87,7 +87,6 @@ const PreviewModal: React.FC<PropType> = ({ url }) => {
       </div>
     );
   };
-
   return mediaFile();
 };
 
