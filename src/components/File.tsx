@@ -27,7 +27,7 @@ const PreviewModal: React.FC<PropType> = ({ url }) => {
           <img
             alt=""
             src={url}
-            className="max-h-4/5 w-full h-full block overflow-auto select-none"
+            className="max-h-4/5 max-w-full block overflow-auto select-none"
             style={{ transform: `rotate(${rotate}deg)` }}
           />
           <div className="fixed inset-x-1/2 bottom-8 flex justify-center">

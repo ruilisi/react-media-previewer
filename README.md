@@ -42,7 +42,7 @@ function App() {
       <PreviewModal
         visible={visible}
         setVisible={setVisible}
-        urls={['YOUR IMAGE URL', 'YOUR IMAGE URL']}
+        urls={["YOUR IMAGE URL", "YOUR IMAGE URL"]}
       />
     </div>
   );
@@ -65,7 +65,7 @@ render(<App />, document.getElementById("app"));
 | :--------- | :------- | :-------------------------------------------------------------- |
 | visible    | bollean  | whether the previewer is visible or not                         |
 | setVisible | function | function called to close the previewer when previewer is opened |
-| url        | string   | media file url                                                  |
+| urls       | string[] | media file urls                                                 |
 
 ## Roadmap
 

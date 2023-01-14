@@ -42,7 +42,7 @@ function App() {
       <PreviewModal
         visible={visible}
         setVisible={setVisible}
-        urls={['图片链接', '图片链接']}
+        urls={["图片链接", "图片链接"]}
       />
     </div>
   );
@@ -65,7 +65,7 @@ render(<App />, document.getElementById("app"));
 | :--------- | :------- | :----------------- |
 | visible    | bollean  | 预览器是否可见     |
 | setVisible | function | 控制预览器可见性   |
-| url        | string   | 媒体文件的链接地址 |
+| urls       | string[] | 媒体文件的链接地址 |
 
 ## 项目计划
 
