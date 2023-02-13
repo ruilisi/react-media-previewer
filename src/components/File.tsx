@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import mime from "mime-types";
+import mime from 'mime'
 import PDFViewer from "./PDFViewer";
 import {
   isAudioFile,
@@ -19,7 +19,7 @@ type PropType = {
 
 const PreviewModal: React.FC<PropType> = ({ url }) => {
   const [rotate, setRotate] = useState<number>(0);
-  const type = mime.lookup(url) || "image";
+  const type = mime.getType(url) || "image";
   const mediaFile = () => {
     if (isImageFile(type))
       return (
