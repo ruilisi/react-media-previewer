@@ -1,5 +1,6 @@
 /src
 /images
+examples
 postcss.config.js
 README-CN.md
 commitlint.config.js
